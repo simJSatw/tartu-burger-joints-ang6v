@@ -1,0 +1,33 @@
+
+.mainDiv {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+
+
+  .imgGallery {
+
+    padding: 15px 0;
+
+    img {
+      width: 350px;
+      height: 350px;
+      margin: 20px;
+      border-radius: 50%;
+      transition: all .3s;
+      opacity: .5;
+
+      &:hover {
+        border-radius: 0;
+        transform: scale(1.2);
+        opacity: 1;
+      }
+    }
+
+  }
+
+  h2 {
+    color: whitesmoke;
+  }
+
+}

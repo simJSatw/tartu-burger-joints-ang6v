@@ -1,0 +1,29 @@
+.mainDiv {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.mainDiv .imgGallery {
+  padding: 15px 0;
+}
+
+.mainDiv .imgGallery img {
+  width: 350px;
+  height: 350px;
+  margin: 20px;
+  border-radius: 50%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.mainDiv .imgGallery img:hover {
+  border-radius: 0;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.mainDiv h2 {
+  color: whitesmoke;
+}
+/*# sourceMappingURL=gallery.component.css.map */

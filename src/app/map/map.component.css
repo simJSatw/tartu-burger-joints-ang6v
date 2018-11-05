@@ -1,0 +1,33 @@
+.app-div {
+  height: 100%;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#073fb7), to(#ff00bf));
+  background-image: linear-gradient(to bottom left, #073fb7, #ff00bf);
+}
+
+.app-div h2 {
+  color: whitesmoke;
+}
+
+.app-div .mapDiv {
+  margin-top: 2%;
+  width: 90%;
+}
+
+.app-div .mapDiv .googleMap {
+  border: 1px solid black;
+  text-align: center;
+  margin: 2% auto;
+  border-radius: 5px;
+}
+
+.app-div .mapDiv .googleMap #mapId {
+  width: 100%;
+  height: 570px;
+}
+
+.app-div .mapDiv .googleMap #mapId #venueInfoSpan {
+  text-align: left;
+  font-weight: bold;
+  color: #399E86;
+}
+/*# sourceMappingURL=map.component.css.map */

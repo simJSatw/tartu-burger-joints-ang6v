@@ -1,0 +1,69 @@
+<div class="container-fluid app-div">
+  <div class="row justify-content-center">
+    <div class="mapDiv ">
+<!--col col-lg-6 col-md-10 col-sm-12-->
+      <h2>Available Venues</h2>
+
+      <!--Initializing them map-->
+      <div class="googleMap">
+
+          <agm-map
+            id="mapId"
+            [latitude]="tartuCenter.lat"
+            [longitude]="tartuCenter.lng"
+            [zoom]="tartuCenter.zoom">
+
+            <!-- START Drawing a Circle of 1000m radius from the Bus Station  -->
+            <agm-circle
+              [latitude]="noBurgerRadius.lat"
+              [longitude]="noBurgerRadius.lng"
+              [circleDraggable]="false"
+              [editable]="false"
+              [fillColor]="noBurgerRadius.color"
+              [radius]="noBurgerRadius.radius">
+            </agm-circle>
+            <!-- END Drawing a Circle of 1000m radius from the Bus Station  -->
+
+            <!-- START Puttinng all markers in place -->
+            <ul *ngFor="let singleLoc of sortedNandLocAr">
+              <li>
+
+                <!-- START Single marker config -->
+                <agm-marker
+                  [latitude]="singleLoc.lat"
+                  [longitude]="singleLoc.lng"
+                  iconUrl="../../assets/128-128-b030adac9955cf87d7abe3e5f2106d90.png"
+                  [title]="singleLoc.name"
+                  (markerClick)="clickedMarker()">
+
+                  <!-- START Name of the clicked burger joint  -->
+                  <agm-info-window>
+                    <span id="venueInfoSpan">
+                      {{singleLoc.name}}
+                    </span>
+                  </agm-info-window>
+                  <!-- END name of the clicked burger joint  -->
+
+                </agm-marker>
+                <!-- END Single marker config -->
+
+              </li>
+            </ul>
+            <!-- END Puttinng all markers in place -->
+
+          </agm-map>
+
+        </div>
+        <!--end .googleMap-->
+
+      </div>
+      <!--end mapDiv col col-lg-->
+
+    <gallery></gallery>
+
+    </div>
+    <!-- end row justify-content-center-->
+
+</div>
+<!-- end container-fluid app-div-->
+
